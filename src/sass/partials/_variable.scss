@@ -1,0 +1,26 @@
+$var: (
+  container-width: 124rem,
+  section-spacing: 12rem,
+
+  pink-clr: #F62682,
+  purple-clr: #6A5AF9,
+  orange-clr: #FF6651,
+  blue-clr: #2cccff,
+  green-clr: #20E3B2,
+
+  shadow-1: rgba(149, 157, 165, 0.15) 0px 8px 24px,
+);
+
+:root {
+  @each $property,
+  $value in $var {
+    --#{$property}: #{$value};
+  }
+}
+
+// Browser fallback
+
+@mixin var($property, $value) {
+  #{$property}: map-get($map: $var, $key: $value);
+  #{$property}: var(--#{$value});
+}
