@@ -1,3 +1,20 @@
-@use "./partials/reset" as *;
-@use "./partials/variable" as *;
-@use "./partials/base" as *;
+@use "./base/reset" as *;
+@use "./base/media-query" as *;
+@use "./base/root" as *;
+@use "./base/typography";
+@use "./base/base" as *;
+
+// @use "./layout/grid" as *;
+@use "./layout/layout" as *;
+
+@use "./utilities/container" as *;
+@use "./utilities/flow" as *;
+@use "./utilities/flex-container" as *;
+@use "./utilities/color-utilities" as *;
+
+@use "./components/buttons" as *;
+@use "./components/links" as *;
+@use "./components/nav" as *;
+@use "./components/logo" as *;
+@use "./components/menu" as *;
+@use "./components/banner" as *;

@@ -1,0 +1,14 @@
+[class*="arrow-link"] {
+  color: var(--blue-500);
+  font-weight: var(--fw-500);
+
+  & > * + * {
+    margin-left: 0.8rem;
+  }
+  &[class^="sm"] {
+    font-size: var(--fs-300);
+  }
+  &[class^="md"] {
+    font-size: var(--fs-500);
+  }
+}

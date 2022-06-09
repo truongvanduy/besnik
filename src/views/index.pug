@@ -15,4 +15,13 @@ html(lang="en")
     link(rel="shortcut icon", href="../images/gulp-icon.png", type="image/x-icon")
     title Gulp Boilerplate
   body 
-    h1(style='text-align: center; font-size: 5rem; font-weight: 600; margin-top: 30vh; color: #eb4a4b;') Welcome to Gulp Boilerplate
+    .wrapper 
+      include ./blocks/header
+      main.main 
+        include ./blocks/brands
+        include ./blocks/guidelines
+        include ./blocks/features
+        include ./blocks/numbers
+        include ./blocks/properties
+      include ./blocks/footer
+    

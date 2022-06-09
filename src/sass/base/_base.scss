@@ -1,0 +1,23 @@
+@use "./root" as *;
+
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  color: var(--primary-300);
+  background-color: var(--neutral-100);
+  line-height: var(--lh-500);
+}

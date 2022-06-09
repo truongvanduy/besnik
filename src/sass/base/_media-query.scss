@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+@mixin min-width($rawSize) {
+  $screenSize: map-get(
+    $map: $breakpoints,
+    $key: $rawSize,
+  );
+  @if ($screenSize) {
+    @media screen and (min-width: $screenSize) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $rawSize) {
+      @content;
+    }
+  }
+}
+@mixin max-width($rawSize) {
+  $screenSize: map-get(
+    $map: $breakpoints,
+    $key: $rawSize,
+  );
+  @if ($screenSize) {
+    @media screen and (max-width: calc($screenSize - 0.02px)) {
+      @content;
+    }
+  } @else {
+    @media screen and (max-width: calc($rawSize - 0.02px)) {
+      @content;
+    }
+  }
+}

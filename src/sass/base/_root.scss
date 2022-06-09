@@ -1,0 +1,44 @@
+@use "../abstracts" as *;
+@use "./media-query" as *;
+
+/* Generate custom properties from maps */
+:root {
+  /* Spacing */
+  --container-width: 111rem;
+  --section-spacing: 6rem;
+  @include min-width(md) {
+    --section-spacing: 12rem;
+  }
+
+  /* Colors */
+  @each $color, $shade in $colors {
+    @each $prop, $value in $shade {
+      --#{$color}-#{$prop}: #{$value};
+    }
+  }
+
+  /* Font size */
+  @each $screenSize, $font-size in $type-scale {
+    @if $screenSize == small {
+      @each $size, $value in $font-size {
+        --fs-#{$size}: #{$value};
+      }
+    } @else {
+      @include min-width(md) {
+        @each $size, $value in $font-size {
+          --fs-#{$size}: #{$value};
+        }
+      }
+    }
+  }
+
+  /* Font weight */
+  @for $i from 3 to 8 {
+    --fw-#{$i*100}: #{$i * 100};
+  }
+
+  /* Line height */
+  @for $i from 0 to 6 {
+    --lh-#{$i*100}: #{1 + calc($i / 10)};
+  }
+}
