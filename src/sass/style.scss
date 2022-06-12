@@ -1,7 +1,6 @@
 @use "./base/reset" as *;
-@use "./base/media-query" as *;
 @use "./base/root" as *;
-@use "./base/typography";
+@use "./base/typography" as *;
 @use "./base/base" as *;
 
 // @use "./layout/grid" as *;
@@ -12,9 +11,4 @@
 @use "./utilities/flex-container" as *;
 @use "./utilities/color-utilities" as *;
 
-@use "./components/buttons" as *;
-@use "./components/links" as *;
-@use "./components/nav" as *;
-@use "./components/logo" as *;
-@use "./components/menu" as *;
-@use "./components/banner" as *;
+@use "./components" as *;

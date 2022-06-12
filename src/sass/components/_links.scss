@@ -1,8 +1,12 @@
 [class*="arrow-link"] {
   color: var(--blue-500);
   font-weight: var(--fw-500);
+  text-decoration: none;
+  transition: var(--tsall);
+  padding-block: 0.8rem;
 
   & > * + * {
+    transition: var(--tsall);
     margin-left: 0.8rem;
   }
   &[class^="sm"] {
@@ -10,5 +14,13 @@
   }
   &[class^="md"] {
     font-size: var(--fs-500);
+  }
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    & > * + * {
+      transform: translateX(1rem);
+    }
   }
 }

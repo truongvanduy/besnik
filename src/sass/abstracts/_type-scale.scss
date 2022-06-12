@@ -4,8 +4,8 @@ $type-scale: (
     200: 1.3rem,
     300: 1.4rem,
     400: 1.6rem,
-    500: 1.8rem,
-    600: 2rem,
+    500: 1.6rem,
+    600: 1.8rem,
     700: 2.5rem,
     800: 3.2rem,
   ),
@@ -17,6 +17,6 @@ $type-scale: (
     500: 1.8rem,
     600: 2rem,
     700: 3.5rem,
-    800: 6.4rem,
+    800: clamp(3.2rem, 3.5vw + 1rem, 6.4rem),
   ),
 );

@@ -1,4 +1,7 @@
+@use "../abstracts/" as *;
+
 .nav {
   padding-block: 2rem;
   font-size: var(--fs-300);
+  position: relative;
 }

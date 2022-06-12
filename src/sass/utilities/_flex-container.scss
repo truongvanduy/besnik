@@ -24,7 +24,7 @@
   }
 }
 
-@for $i from 8 to 69 {
+@for $i from 4 to 69 {
   .gap-#{$i} {
     gap: #{calc($i / 10)}rem;
   }

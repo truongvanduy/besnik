@@ -1,0 +1,12 @@
+section(class="feature | bg-blue-300")
+  .container.flow
+    h2(class="text-primary-800") Featured Properties
+    div(class="feature__content | flex-center-between mt-15")
+      p Everything you need to know when you're looking
+      a(class="arrow-link-md | flex-center-between" href="#!") 
+        span View All Properties
+        img(src="../images/arrow-md.svg", alt="")
+    div(class="feature-list | flex-center-between mt-68 gap-30")
+      +featureItem("../images/feature-1.png")
+      +featureItem("../images/feature-2.png")
+      +featureItem("../images/feature-3.png")

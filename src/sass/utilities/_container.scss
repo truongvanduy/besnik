@@ -4,7 +4,22 @@
   padding-right: 2rem;
   margin-left: auto;
   margin-right: auto;
+  &-685 {
+    --container-width: 68.5rem;
+  }
+  &-1048 {
+    --container-width: 104.8rem;
+  }
 }
 .width-full {
   width: 100%;
+}
+.width-fit {
+  width: fit-content;
+}
+.height-full {
+  height: 100%;
+}
+.height-fit {
+  height: fit-content;
 }

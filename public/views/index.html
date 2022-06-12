@@ -9,36 +9,147 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" href="../images/gulp-icon.png" type="image/x-icon">
-    <title>Gulp Boilerplate</title>
+    <link rel="shortcut icon" href="../images/logo.svg" type="image/x-icon">
+    <title>Besnik.</title>
   </head>
   <body> 
     <div class="wrapper"> 
       <header class="header | bg-blue-400">
         <nav class="nav | container flex-row-center">
           <div class="logo"> <img src="../images/logo.svg" alt="Logo"></div>
-          <ul class="menu | flex-center-between gap-30">
+          <button class="toggle | text-primary-700">
+            <div class="burger"><i class="fa-solid fa-bars"></i></div>
+            <div class="times"><i class="fa fa-times"></i></div>
+          </button>
+          <ul class="menu | flex-center-between gap-30 width-full">
             <li class="menu__item"><a class="menu__link | text-primary-450">Home</a></li>
             <li class="menu__item"><a class="menu__link | text-primary-450">Features</a></li>
             <li class="menu__item"><a class="menu__link | text-primary-450">Service</a></li>
             <li class="menu__item"><a class="menu__link | text-primary-450">Listed</a></li>
             <li class="menu__item"><a class="menu__link | text-primary-450">Contact</a></li>
+            <li class="menu__action | ml-auto flex-row-center gap-18">
+              <button class="btn btn-text | text-primary-700">Login</button>
+              <button class="btn btn-sm | text-neutral-100 bg-primary-700">Register</button>
+            </li>
           </ul>
-          <div class="nav__action | ml-auto flex-row-center gap-18">
-            <button class="btn btn-text | text-primary-700">Login</button>
-            <button class="btn btn-sm | text-neutral-100 bg-primary-700">Register</button>
-          </div>
         </nav>
-        <div class="banner | container flex-row-center gap-68">
-          <div class="banner__content | flow"><span class="banner__caption | fs-500">Welcome to Besnik Agency</span>
+        <div class="banner | container flex-row-center">
+          <div class="banner__content | flow flex-col"><span class="banner__caption | fs-500">Welcome to Besnik Agency</span>
             <h1 class="banner__title | text-primary-800 mt-8">Discover a place you'll love to live.</h1>
-            <p class="fs-500 mt-30">get the best real estate deals first, before they hit the mass market! HOT FORECLOSURE DEALS with one simple search</p>
+            <p class="banner__desc | fs-500 mt-30">get the best real estate deals first, before they hit the mass market! HOT FORECLOSURE DEALS with one simple search</p>
             <button class="btn btn-md | text-neutral-100 bg-primary-700 mt-40">More About Us</button>
           </div>
           <div class="banner__img"><img src="../images/hero.png" alt="House"></div>
         </div>
       </header>
-      <main class="main"> </main>
+      <main class="main"> 
+        <section class="brand"> 
+          <div class="container | flow">
+            <div class="brand__about | flex-center-between">
+              <div class="flow flex-col"><span class="logo"><img src="../images/logo.svg" alt="Logo"></span>
+                <p class="mt-23 lh-300 text-neutral-600">More than 45,000+ companies trust besnik</p>
+              </div>
+              <div class="brand__review | flex-col gap-14">
+                <div class="brand__stars | flex-row-center gap-4"><img src="../images/star.png" alt="star"><img src="../images/star.png" alt="star"><img src="../images/star.png" alt="star"><img src="../images/star.png" alt="star"><img src="../images/star.png" alt="star"></div>
+                <p class="mt-23 lh-300 text-neutral-600">5 Star Ratings (2k+ Review)</p>
+              </div>
+            </div>
+            <div class="brand__list | flex-center-between mt-70 gap-24"><img src="../images/meundies.png" alt="meUndies"><img src="../images/slack.png" alt="slack"><img src="../images/amazon.png" alt="amazon"><img src="../images/woocommerce.png" alt="woocommerce"><img src="../images/sitepoint.png" alt="meUndies"></div>
+          </div>
+        </section>
+        <section class="guideline"> 
+          <div class="container container-685 flow flex-col-center">
+            <div class="section-bar bg-neutral-800"></div>
+            <h2 class="text-neutral-800 mt-10">How its works ?</h2>
+            <p class="guideline__desc | mt-20 text-center">Everything you need to know when you're looking to buy, rent, or sell - all in one place.</p>
+            <div class="guideline-list | flex-center-between gap-28 mt-70 width-full">
+              <figure class="guidline-item | flex-col-center flow">
+                <div class="guideline-item__img"> <img src="../images/buyer.png" alt=""/></div>
+                <figcaption class="guidline-item__title | h3 text-neutral-700">Buyer Guides</figcaption><a class="arrow-link-sm | flex-row-center mt-2"><span>How to buy</span><img src="../images/arrow-sm.svg" alt=""/></a>
+              </figure>
+              <figure class="guidline-item | flex-col-center flow">
+                <div class="guideline-item__img"> <img src="../images/renter.png" alt=""/></div>
+                <figcaption class="guidline-item__title | h3 text-neutral-700">Renter Guides</figcaption><a class="arrow-link-sm | flex-row-center mt-2"><span>How to rent</span><img src="../images/arrow-sm.svg" alt=""/></a>
+              </figure>
+              <figure class="guidline-item | flex-col-center flow">
+                <div class="guideline-item__img"> <img src="../images/seller.png" alt=""/></div>
+                <figcaption class="guidline-item__title | h3 text-neutral-700">Seller Guides</figcaption><a class="arrow-link-sm | flex-row-center mt-2"><span>How to sell</span><img src="../images/arrow-sm.svg" alt=""/></a>
+              </figure>
+            </div>
+            <button class="btn btn-md | bg-primary-800 text-neutral-100 mt-46">See Full Guidelines</button>
+          </div>
+        </section>
+        <section class="feature | bg-blue-300">
+          <div class="container flow">
+            <h2 class="text-primary-800">Featured Properties</h2>
+            <div class="feature__content | flex-center-between mt-15">
+              <p>Everything you need to know when you're looking</p><a class="arrow-link-md | flex-center-between" href="#!"> <span>View All Properties</span><img src="../images/arrow-md.svg" alt=""></a>
+            </div>
+            <div class="feature-list | flex-center-between mt-68 gap-30">
+              <figure class="feature-item | flex-col bg-neutral-100">
+                <div class="feature-item__img"> <img src="../images/feature-1.png" alt="feature"/></div>
+                <div class="p-20 flow flex-col fw-500">
+                  <figcaption class="h3 fw-600 lh-0 text-primary-800 mt-0">$35000</figcaption>
+                  <p class="text-neutral-400 fs-300 mt-8">8502 Preston Rd. Inglewood, Maine 98280</p>
+                  <div class="flex-center-between mt-20"> 
+                    <div class="flex-center-between gap-8"><img src="../images/bed.svg" alt=""/><span class="fs-300 lh-0 text-neutral-650">5 beds</span></div>
+                    <div class="flex-center-between gap-8"><img src="../images/bath.svg" alt=""/><span class="fs-300 lh-0 text-neutral-650">2 baths</span></div>
+                    <div class="flex-center-between gap-8"><img src="../images/square.svg" alt=""/><span class="fs-300 lh-0 text-neutral-650">2000 sqft</span></div>
+                  </div>
+                </div>
+              </figure>
+              <figure class="feature-item | flex-col bg-neutral-100">
+                <div class="feature-item__img"> <img src="../images/feature-2.png" alt="feature"/></div>
+                <div class="p-20 flow flex-col fw-500">
+                  <figcaption class="h3 fw-600 lh-0 text-primary-800 mt-0">$35000</figcaption>
+                  <p class="text-neutral-400 fs-300 mt-8">8502 Preston Rd. Inglewood, Maine 98280</p>
+                  <div class="flex-center-between mt-20"> 
+                    <div class="flex-center-between gap-8"><img src="../images/bed.svg" alt=""/><span class="fs-300 lh-0 text-neutral-650">5 beds</span></div>
+                    <div class="flex-center-between gap-8"><img src="../images/bath.svg" alt=""/><span class="fs-300 lh-0 text-neutral-650">2 baths</span></div>
+                    <div class="flex-center-between gap-8"><img src="../images/square.svg" alt=""/><span class="fs-300 lh-0 text-neutral-650">2000 sqft</span></div>
+                  </div>
+                </div>
+              </figure>
+              <figure class="feature-item | flex-col bg-neutral-100">
+                <div class="feature-item__img"> <img src="../images/feature-3.png" alt="feature"/></div>
+                <div class="p-20 flow flex-col fw-500">
+                  <figcaption class="h3 fw-600 lh-0 text-primary-800 mt-0">$35000</figcaption>
+                  <p class="text-neutral-400 fs-300 mt-8">8502 Preston Rd. Inglewood, Maine 98280</p>
+                  <div class="flex-center-between mt-20"> 
+                    <div class="flex-center-between gap-8"><img src="../images/bed.svg" alt=""/><span class="fs-300 lh-0 text-neutral-650">5 beds</span></div>
+                    <div class="flex-center-between gap-8"><img src="../images/bath.svg" alt=""/><span class="fs-300 lh-0 text-neutral-650">2 baths</span></div>
+                    <div class="flex-center-between gap-8"><img src="../images/square.svg" alt=""/><span class="fs-300 lh-0 text-neutral-650">2000 sqft</span></div>
+                  </div>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </section>
+        <section class="number"> 
+          <div class="container container-1048 flow"> 
+            <div class="number-intro | flex-center-between gap-24">
+              <div class="number-img"> <img src="../images/card.png" alt=""></div>
+              <div class="number-info flow flex-col">
+                <div class="section-bar bg-neutral-800"></div>
+                <h2 class="number-title text-neutral-800 mt-10">You’ve found a neighborhood you love.</h2>
+                <p class="number-desc | mt-20">When you own a home, you’re committing to living in one location for a while. In a recent Trulia survey, we found that five out of six respondents said finding the right neighborhood </p>
+              </div>
+            </div>
+            <div class="number-spec | flex-center-between gap-28">
+              <div class="number-group | flex-col-center gap-24"><span class="h1 text-primary-800 lh-0">2500</span>
+                <p class="fs-500 fext-neutral-600">Homes For Sale</p>
+              </div>
+              <div class="number-group | flex-col-center gap-24"><span class="h1 text-primary-800 lh-0">5000+</span>
+                <p class="fs-500 fext-neutral-600">Homes Recently Sold</p>
+              </div>
+              <div class="number-group | flex-col-center gap-24"><span class="h1 text-primary-800 lh-0">170+</span>
+                <p class="fs-500 fext-neutral-600">Price Reduced</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
+    <script src="../js/app.js"> </script>
   </body>
 </html>

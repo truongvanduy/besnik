@@ -1,0 +1,26 @@
+mixin guidelineItem(title, desc, imgSrc)
+  figure(class="guidline-item | flex-col-center flow")
+    .guideline-item__img 
+      img(src= imgSrc, alt="")
+    figcaption(class="guidline-item__title | h3 text-neutral-700")= title
+    a(class="arrow-link-sm | flex-row-center mt-2")
+      span= desc
+      img(src="../images/arrow-sm.svg", alt="")
+
+mixin featureItem(imgSrc)
+  figure(class="feature-item | flex-col bg-neutral-100")
+    .feature-item__img 
+      img(src= imgSrc, alt="feature")
+    .p-20.flow.flex-col.fw-500
+      figcaption.h3.fw-600.lh-0.text-primary-800.mt-0 $35000
+      p.text-neutral-400.fs-300.mt-8 8502 Preston Rd. Inglewood, Maine 98280
+      .flex-center-between.mt-20 
+        .flex-center-between.gap-8
+          img(src="../images/bed.svg", alt="")
+          span.fs-300.lh-0.text-neutral-650 5 beds
+        .flex-center-between.gap-8
+          img(src="../images/bath.svg", alt="")
+          span.fs-300.lh-0.text-neutral-650 2 baths
+        .flex-center-between.gap-8
+          img(src="../images/square.svg", alt="")
+          span.fs-300.lh-0.text-neutral-650 2000 sqft

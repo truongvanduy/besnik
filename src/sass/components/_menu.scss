@@ -1,3 +1,66 @@
+@use "../abstracts" as *;
+
 .menu {
   margin-left: 6.4rem;
+  @include max-width(lg) {
+    --gap: 2em;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    flex-direction: column;
+    justify-content: flex-start;
+
+    margin-left: unset;
+    padding: 5em;
+    background-color: var(--neutral-100);
+
+    transform: translateX(100%);
+    transition: var(--tsall);
+
+    &__item {
+      padding-block: calc(var(--gap) / 2);
+    }
+
+    &__action {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: var(--gap);
+
+      margin-left: unset;
+
+      & *:first-child {
+        padding-block: calc(var(--gap) / 2);
+      }
+    }
+  }
+
+  .toggle[data-state="opened"] ~ & {
+    transform: translateX(0);
+  }
+}
+
+.toggle {
+  display: flex;
+  padding: 2rem;
+  font-size: 2.2rem;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+
+  cursor: pointer;
+
+  @include min-width(lg) {
+    display: none;
+  }
+
+  &[data-state="opened"] .burger,
+  &:not([data-state="opened"]) .times {
+    display: none;
+  }
 }

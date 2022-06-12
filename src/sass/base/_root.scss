@@ -1,10 +1,9 @@
 @use "../abstracts" as *;
-@use "./media-query" as *;
 
 /* Generate custom properties from maps */
 :root {
   /* Spacing */
-  --container-width: 111rem;
+  --container-width: 115rem;
   --section-spacing: 6rem;
   @include min-width(md) {
     --section-spacing: 12rem;
@@ -41,4 +40,7 @@
   @for $i from 0 to 6 {
     --lh-#{$i*100}: #{1 + calc($i / 10)};
   }
+
+  /* Transition */
+  --tsall: all 0.25s linear;
 }

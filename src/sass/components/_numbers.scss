@@ -1,0 +1,40 @@
+@use "../abstracts/" as *;
+
+.number {
+  &-img {
+    max-width: 50%;
+    width: 100%;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-info {
+    padding-right: 3.4em;
+  }
+  &-title {
+    max-width: 14ch;
+  }
+  &-desc {
+    max-width: 31ch;
+  }
+  &-spec {
+    margin-top: var(--section-spacing);
+    flex-wrap: wrap;
+    @include max-width(sm) {
+      justify-content: space-around;
+    }
+  }
+  @include max-width(md) {
+    &-intro {
+      flex-direction: column;
+      align-items: center;
+    }
+    &-info {
+      align-items: center;
+      text-align: center;
+      padding-right: unset;
+    }
+  }
+}

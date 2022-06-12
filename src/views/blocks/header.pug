@@ -1,26 +1,10 @@
 header(class="header | bg-blue-400")
-  nav(class="nav | container flex-row-center")
-    .logo 
-      img(src="../images/logo.svg", alt="Logo")
-    ul(class="menu | flex-center-between gap-30")
-      li(class="menu__item")
-        a(class="menu__link | text-primary-450") Home
-      li(class="menu__item")
-        a(class="menu__link | text-primary-450") Features
-      li(class="menu__item")
-        a(class="menu__link | text-primary-450") Service
-      li(class="menu__item")
-        a(class="menu__link | text-primary-450") Listed
-      li(class="menu__item")
-        a(class="menu__link | text-primary-450") Contact
-    div(class="nav__action | ml-auto flex-row-center gap-18")
-      button(class="btn btn-text | text-primary-700") Login
-      button(class="btn btn-sm | text-neutral-100 bg-primary-700") Register
-  div(class="banner | container flex-row-center gap-68")
-    div(class="banner__content | flow")
+  include ./navigation
+  div(class="banner | container flex-row-center")
+    div(class="banner__content | flow flex-col")
       span(class="banner__caption | fs-500") Welcome to Besnik Agency
       h1(class="banner__title | text-primary-800 mt-8") Discover a place you'll love to live.
-      p(class="fs-500 mt-30") get the best real estate deals first, before they hit the mass market! HOT FORECLOSURE DEALS with one simple search
+      p(class="banner__desc | fs-500 mt-30") get the best real estate deals first, before they hit the mass market! HOT FORECLOSURE DEALS with one simple search
       button(class="btn btn-md | text-neutral-100 bg-primary-700 mt-40") More About Us
     div(class="banner__img")
       img(src="../images/hero.png", alt="House")

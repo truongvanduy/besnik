@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use "./breakpoints" as *;
 
 @mixin min-width($rawSize) {
   $screenSize: map-get(
@@ -17,15 +17,15 @@
 }
 @mixin max-width($rawSize) {
   $screenSize: map-get(
-    $map: $breakpoints,
+    $map: $under-breakpoints,
     $key: $rawSize,
   );
   @if ($screenSize) {
-    @media screen and (max-width: calc($screenSize - 0.02px)) {
+    @media screen and (max-width: $screenSize) {
       @content;
     }
   } @else {
-    @media screen and (max-width: calc($rawSize - 0.02px)) {
+    @media screen and (max-width: $rawSize) {
       @content;
     }
   }

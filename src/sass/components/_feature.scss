@@ -1,0 +1,54 @@
+@use "../abstracts/" as *;
+
+.feature {
+  padding-block: 11rem;
+  &-item {
+    box-shadow: 0 6.5rem 8rem rgba(226, 238, 249, 0.6);
+    border-radius: 1.2rem;
+    &__img {
+      max-width: 35rem;
+      width: 100%;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  @include max-width(lg) {
+    &-list {
+      display: grid;
+      justify-content: flex-start;
+      grid-auto-columns: min(35rem, 90%);
+      grid-auto-flow: column;
+      grid-gap: 2rem;
+      overflow: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      -ms-touch-action: manipulation;
+      touch-action: manipulation;
+      -webkit-overflow-scrolling: touch;
+      scroll-padding: 1rem;
+      grid-template-columns: unset;
+    }
+    &-list::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+    &-list > * {
+      scroll-snap-align: start;
+    }
+  }
+  @include max-width(md) {
+    padding-block: 6rem;
+
+    &__content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &-list {
+      margin-top: 4rem;
+    }
+  }
+}

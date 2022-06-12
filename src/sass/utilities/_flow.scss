@@ -2,9 +2,15 @@
   margin-top: var(--flow-spacer, 0.75em);
 }
 
-@for $i from 4 to 61 {
+@for $i from 0 to 81 {
   .mt-#{$i} {
     --flow-spacer: #{$i * 0.1}rem;
+  }
+  .p-#{$i} {
+    padding: #{$i * 0.1}rem;
+  }
+  .m-#{$i} {
+    margin: #{$i * 0.1}rem;
   }
 }
 
